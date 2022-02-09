@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <input type="button" value="callFetch" onclick="
+        fetch('html').then(
+                function(response){
+                    response.text().then(
+                            function(text){
+                                alert(text)}
+                                    )
+        })
+        ">
+        <article>
+
+        </article>
+    </body>
+</html>

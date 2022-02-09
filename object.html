@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object practice</title>
+</head>
+<body>
+    <script>
+        let coworkers = {
+            "programmer" : "egoing",
+            "bookkeeper": "duru",
+        }
+        document.write(coworkers.programmer+"<br>");
+        document.write(coworkers.bookkeeper+"<br>");
+        document.write(coworkers.designer+"<br>");
+        coworkers.designer='meme';
+        document.write(coworkers.designer+"<br>");
+        document.write(coworkers["cleaner name"]+"<br>");
+        
+        coworkers["cleaner name"] = "yonghe";
+        console.log(coworkers)
+
+        document.write(coworkers["cleaner name"]+"<br>");
+        document.write(Object.values(coworkers)+"<br>");
+        document.write(Object.keys(coworkers)+"<br>");
+
+        for(let aaa in coworkers){
+        document.write(aaa+"<br>");
+        }
+
+        
+    </script>
+    <h1>Property & Method</h1>
+    <script>
+        coworkers.showAll = function(){
+            for(var target in coworkers){
+                console.log(target);
+            document.write( target +" : "+coworkers[target] +"  <br>" ); 
+
+            };
+        }
+
+        coworkers.showAll();
+    </script>
+</body>
+</html>
