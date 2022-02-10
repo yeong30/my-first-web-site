@@ -15,19 +15,28 @@
                 })
             
             }
+            fetch('list').then(function(res){
+                res.text().then(function(text){
+                    let list = text.split(',');
+                    let i =0;
+                    let li_data='';
+                    while(i<list.length){
+                        let name=list[i];
+                        name = name.trim();
+                       document.querySelector('#target').innerHTML+='<li><a onclick="onClickList(\''+name+'\')">'+name+'</a></li>';
+                        i++;
+                    }
+                })                
+            })
         </script>
     </head>
     <body>
         <h1><a href="index.html">WEB</a></h1>
         <div id="grid">
             <input  type="button" value="night" onClick="nightDayHandler(this)">
-            <ol>
-                <li><a onclick="onClickList('html')">HTML</a>  </li>
-                <li><a onclick="onClickList('css');">CSS</a> </li>
-                <li><a onclick="onClickList('javaScript');">JavaScript</a> </li>
+            <ol id="target">
             </ol>
             <article>
-
             </article>
         </div>
         
